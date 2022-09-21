@@ -1,0 +1,35 @@
+                  .filter label{
+                    cursor:pointer;
+                  }
+                  .filter:hover label {
+                    border-bottom: 0.5px #232f3e solid;
+                    color: #232f3e;
+
+                  }
+                  .filter:hover .check {
+                    background-color:  #3f546f;
+
+                  }
+
+
+  .filter input:checked ~ .check {
+                     background-color:  #232f3e;
+
+
+                  }
+                  .filter {
+                    margin-left: 20px;
+                  }
+.check {
+  position: absolute;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  padding-left: 3px;
+  margin-left: 5px;
+  background-color: #ccc;
+
+}
+
+
+

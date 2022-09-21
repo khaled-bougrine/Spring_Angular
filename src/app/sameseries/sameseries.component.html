@@ -1,0 +1,56 @@
+
+ 	
+
+
+        <div *ngIf="index!=-1" style="display: flex;justify-content: center; flex-direction: column;">
+    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:25px; border-bottom: 1px #d2cdc9 solid ; "> Lié au ce produit N:{{index+1}}</b>
+
+    <b class="" style="color: #8b8b8b; font-family: 'Acme', sans-serif; font-size:16px; ">clicker  sur un  model pour ajouter a voter collection {{size}} </b>
+  
+
+</div>
+<div class="test2" style="border-bottom: 1px #d2cdc9 solid ;">
+	 <b  *ngIf="index==-1"   style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:25px; ;   ;"> Lié a ce produit </b>
+</div>
+
+    
+  
+
+
+ 
+
+
+
+<div  style="display: flex;  padding-top: 10px;margin-bottom: 20px;padding-left: auto;padding-right: auto;" >
+
+<button (click)="previes()" [disabled]="d==0" style="position: absolute;;left: 20px ;margin-top: 100px;"type="button" class=" btn btn-light"><b style="font-family: 'Open Sans Condensed', sans-serif;   font-size: 28px; ;">&laquo;</b>
+</button>
+
+
+	<!--(click)="change(index,pro)"!-->
+<div *ngIf="index!=-1"  style="display: flex;flex-wrap: wrap;margin-left: 40px;justify-content: space-between;" >
+	<div *ngFor="let pro of list.slice(d,f); let i=index">
+	<app-product2   [product]="pro" (click)= "change(pro)" [isMyProduct]="service.composant[index].id===pro.id" [estDansComposant]="true" ></app-product2>
+		</div>
+	
+</div>
+
+		<div *ngIf="index==-1" style="display: flex;flex-wrap: wrap;margin-left: 40px;justify-content: space-between;">
+				<div *ngFor="let pro of list.slice(d,f);; let i=index">
+	<app-product2    [product]="pro" [type]="type"   ></app-product2>
+		</div>
+		</div>
+
+	
+
+<button  [disabled]="f>=list.length" (click)="next()" style=" position: absolute;right: 20px;margin-top: 100px; "type="button" class=" btn btn-light"><b style="font-family: 'Open Sans Condensed', sans-serif;   font-size: 28px;margin-top: 50px;">&raquo;</b>
+</button>
+	
+</div>
+<style type="text/css">
+	 .test2::first-letter {
+                color: #8b8b8b; 
+                size: 20;
+                
+                
+</style>

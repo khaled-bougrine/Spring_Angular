@@ -1,0 +1,89 @@
+
+ <div style="width:300px;border: 1px #d2cdc9 solid;border-radius: 8px;">
+
+
+ <div style="display: flex;  flex-direction: column;
+" >
+       <div class=" test2 text-center" ><b  style="font-size: 27px">{{model.name}}</b></div>
+                                   <p class="text-center" style="color: #8b8b8b;font-size: 12px;">{{model.description}}</p>
+
+
+
+
+                            <img  (mouseenter)="mouseEnter()"  (mouseleave)="mouseOute()" class="dark"   [src]="model.images[j]"style=" width:300px;height: 400px ">
+
+
+
+
+
+
+           <!---------------->
+
+      <div  style="display: flex;justify-content: space-around;">
+
+
+              <div  style="display: flex;flex-direction: column;">
+<div class="" style="font-family: 'Acme', sans-serif; font-size: 23px;  color:#232f3e;border-top: 1px solid #eff0f3; ">couture</div>
+<b class=""style="font-family: 'Dancing Script', cursive; ;">prix:{{model.price}}DT</b>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+          <div>
+<div style="font-family: 'Acme', sans-serif; font-size: 20px;  color:#232f3e;border-top: 1px solid #eff0f3; ">installation</div>
+
+
+  <b style="font-family: 'Dancing Script', cursive">prix:50dt</b>
+
+
+</div>
+
+
+
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+  .love{
+   font-size:8px; color: #ff0000;padding-left: 5px;
+   visibility: 1;
+  }
+  .nelovepas{
+    font-size:8px; color: #ff0000;padding-left: 5px;
+    visibility: hidden;
+  }
+    .test2::first-letter {
+                color: #8b8b8b;
+                size: 35;
+
+
+              }
+              .test2{
+                color: #2e3d5c; font-family: 'Acme', sans-serif; ;
+              }
+</style>

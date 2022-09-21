@@ -1,0 +1,385 @@
+
+<div class="container-fluid">
+		<nav class="navbar navbar-expand-sm navbar-dark bg-secondary row ">
+			<a class="navbar-brand" href="homepage-static.html">cinderella</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+
+					<li class="nav-item">
+						<a class="nav-link" href="/add/model">__add__Model</a></li>
+
+
+						<li class="nav-item "><a class="nav-link "
+						href="/add/accesoire">__add__Accesoire</a></li>
+
+
+						<li class="nav-item "><a class="nav-link"
+						href="/add/tissus">__add_Tissus</a>
+
+				</ul>
+
+
+			</div>
+		</nav>
+		<div class="row" style="display: flex; flex-wrap: wrap;">
+			<img src="assets/milestone.svg" width="150">
+			<h2 class="mt-4" style="padding-top: 50px;"> Bonjour_________Cinderella.com.tn </h2>
+			<br>
+		</div>
+
+		<hr />
+
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-secondary row ">
+			<a class="navbar-brand" href="homepage-static.html">cinderella</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+
+					<li class="nav-item">
+						<a class="nav-link" href="/toutlesmodel/model">Models</a></li>
+
+
+						<li class="nav-item "><a class="nav-link "
+						href="/toutlesmodel/getaccesoire">Accesoire</a></li>
+
+
+						<li class="nav-item "><a class="nav-link"
+						href="/toutlesmodel/tissus">Tissus</a>
+						<li class="nav-item "><a class="nav-link"
+						href="/toutlesmodel/allCollection">Collection</a></li>
+							<li class="nav-item "><a class="nav-link"
+						href="/toutlesmodel/user">Client</a></li>
+							<li class="nav-item "><a class="nav-link"
+						href="/toutlesmodel/ComTissus">commande</a></li>
+							<li class="nav-item "><a class="nav-link"
+						href="/toutlesmodel/allCollectionpaiee">collectionPaiee</a></li>
+				</ul>
+
+
+			</div>
+		</nav>
+
+
+		<!--form action="#" method="post"
+			th:object="${client}">
+
+			<div class="row">
+				<h2 class="col-3">Find Client</h2>
+
+				<input id="idInput" type="text" class="form-control col-3"
+					 placeholder="id">
+				<div class="col-1"></div>
+
+				<input id="nameInput" type="text" class="form-control col-4 "
+					 placeholder="Name">
+
+				<button type="submit" class="btn-outline-dark  btn col-1"
+					style="height: 20; visibility: hidden;">
+					<h6>Submit</h6>
+				</button>
+
+			</div>
+		</form-->
+
+
+
+		<div style="display: flex;flex-wrap: nowrap;">
+
+			<table *ngIf="mode=='allCollection'" class="table">
+				<thead>
+
+					<tr  class="thead-light" >
+
+
+						<th class="text-left" >id</th>
+
+						<th    class="text-left" >user</th>
+
+						<th   class="text-left" >longure</th>
+
+						<th  class="text-left" >Comande</th>
+							</tr>
+
+
+
+
+
+
+
+
+
+				</thead>
+				<tbody>
+					<tr *ngFor="let model of list">
+
+						<td >#{{model.id}}</td>
+						<td  >#{{model.fku}}</td>
+						<td    >{{model.longure}}</td>
+						<td  >{{model.withCoture}}</td>
+						<!--td >{{model.estpaie}}</td!-->
+						<td><a [href]="'/collectionAdmin/'+mode+'/'+model.id" class="btn btn-info" role="button"
+						>see</a></td>
+
+					</tr>
+
+
+				</tbody>
+
+			</table>
+
+
+
+
+		</div>
+		<!--  =================================================!-->
+				<div style="display: flex;flex-wrap: nowrap;">
+
+
+			<table *ngIf="mode=='ComTissus'" class="table">
+				<thead>
+
+					<tr  class="thead-light" >
+
+
+						<th class="text-left" >id</th>
+							<th class="text-left" >type</th>
+						<th    class="text-left" >user</th>
+
+						<th   class="text-left" >longure</th>
+<th class="text-left" >prixTotal</th>
+<th class="text-left" >prixPaiee</th>
+						<th  class="text-left" >date</th>
+							</tr>
+
+
+
+
+
+
+
+
+
+				</thead>
+				<tbody>
+
+					<tr *ngFor="let model of list">
+
+						<td >#{{model.id}}</td>
+						<td >#{{model.type}}</td>
+
+						<td  >#{{model.fku}}</td>
+						<td    >{{model.longure}}</td>
+
+						<td    >{{model.prixtotal}}</td>
+						<td  >{{model.prixpaiee}}</td>
+							<td  >{{model.date}}</td>
+						<!--td >{{model.estpaie}}</td!-->
+						<td><a [href]="'/collectionAdmin/'+mode+'/'+model.id" class="btn btn-info" role="button"
+						>see</a></td>
+
+					</tr>
+
+
+				</tbody>
+
+			</table>
+
+
+
+
+		</div>
+		<!--    ///////////////////////////////////////////////////--!-->
+		<table *ngIf="mode=='allCollectionpaiee'" class="table">
+				<thead>
+
+					<tr  class="thead-light" >
+
+
+						<th class="text-left" >id</th>
+
+						<th    class="text-left" >user</th>
+
+						<th   class="text-left" >longure</th>
+
+						<th  class="text-left" >Comande</th>
+
+							<th  class="text-left" >prixTotal</th>
+
+							<th  class="text-left" >paiee</th>
+
+
+							<th  class="text-left" >date</th>
+
+</tr>
+
+
+
+
+
+
+
+
+				</thead>
+				<tbody>
+					<!--
+							public id:number,
+   		public idModel:Number,
+		public composant:Number[],
+		public longure:number,
+	   public withCoture:Number,
+		public prixtotal:number,
+		public prixpaiee:number,
+		public fkcp:number,
+	     public date: string
+
+						!-->
+					<tr *ngFor="let model of list">
+
+						<td >#{{model.id}}</td>
+						<td  >#{{model.fku}}</td>
+						<td  >{{model.longure}}</td>
+						<td  >{{model.withCoture}}</td>
+						<td  >{{model.prixtotal}}</td>
+						<td  >{{model.prixpaiee}}</td>
+						<td >{{model.date}}</td>
+						<td><a [href]="'/collectionAdmin/'+ mode +'/'+model.id" class="btn btn-info" role="button"
+						>see</a></td>
+
+					</tr>
+
+
+				</tbody>
+
+			</table>
+
+
+
+
+			<table *ngIf="mode=='getaccesoire'||mode == 'tissus'" class="table">
+				<thead>
+					<tr  class="thead-light">
+						<th></th>
+						<th class="text-left" >id</th>
+						<th class="text-left" >price</th>
+						<th  class="text-left">fournisseur</th>
+						<th class="text-left">length</th>
+						<th class="text-left">nbserie</th>
+						<th class="text-left">solde</th>
+						<th></th>
+						<th></th>
+					</tr>
+
+				</thead>
+				<tbody >
+							<tr *ngFor="let model of list" >
+				<img [src]="model.images[0]" style="width: 50px;height: 50px;">
+												<td >{{model.id}}</td>
+
+								<td >{{model.price}}</td>
+								<td>{{model.fournisseur}}</td>
+						<td >{{model.length}}</td>
+						<td >{{model.nbserie}}</td>
+						<td >-{{model.solde}}%</td>
+
+
+
+						<td><a [href]="'/update/'+mode+'/'+model.id" class="btn btn-info" role="button"
+						>Update</a></td>
+						<td><a  class="btn btn-info" role="button" (click)= deleteModel(model.id)
+						>Delete</a></td>
+											</tr>
+				</tbody>
+			</table>
+			<table *ngIf="mode=='model'" class="table">
+				<thead>
+					<tr  class="thead-light">
+						<th></th>
+						<th class="text-left" >Nom</th>
+						<th  class="text-left">couture</th>
+						<th class="text-left">price</th>
+
+						<th></th>
+						<th></th>
+					</tr>
+
+				</thead>
+				<tbody >
+							<tr *ngFor="let model of list" >
+				<img [src]="model.images[0]" style="width: 50px;height: 50px;">
+								<td >{{model.name}}</td>
+						<td  >  {{model.couture}}</td>
+						<td >{{model.price}}</td>
+
+
+
+
+						<td><a [href]="'/update/'+mode+'/'+model.id" class="btn btn-info" role="button"
+						>Update</a></td>
+						<td><a  class="btn btn-info" role="button" (click)= deleteModel(model.id)
+						>Delete</a></td>
+											</tr>
+				</tbody>
+			</table>
+			<table *ngIf="mode=='user'" class="table">
+				<thead>
+					<tr  class="thead-light">
+
+						<th class="text-left" >Nom</th>
+						<th  class="text-left">prenom</th>
+						<th class="text-left">mail</th>
+
+						<th class="text-left">password</th>
+						<th class="text-left">phon</th>
+
+					</tr>
+
+				</thead>
+				<tbody >
+							<tr *ngFor="let model of list" >
+
+								<td >{{model.name}}</td>
+						<td  >  {{model.prename}}</td>
+						<td >{{model.mail}}</td>
+					<td  >  {{model.password}}</td>
+
+							<td  >  {{model.addresse}}</td>
+						<td >{{model.telephone}}</td>
+
+
+
+
+
+				</tbody>
+				<!--
+						public name:string,
+		public prename:string,
+		public mail:string,
+		public password:string,
+		public etat:string,
+		public codePostale:string,
+
+		public addresse:string,
+		public telephone:string,
+					!-->
+			</table>
+
+	</div>
+	<h4>{{list.length}}items</h4>

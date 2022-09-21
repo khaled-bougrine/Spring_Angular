@@ -1,0 +1,134 @@
+<div style="display: flex;justify-content: center;  ;">
+  <div *ngIf="id !='ComTissus'" style="display: flex;justify-content: center;flex-direction: column;">
+    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:35px; border-bottom: 1px #d2cdc9 solid;padding-top: 50px; "> Model :{{model.name}}</b>
+
+ 
+ 
+    <div style="display: flex;">
+         
+  <p>
+  id: {{model.id}} <br>couture::{{model.couture}}
+      </p>
+ 
+
+  </div>
+
+
+
+  
+  
+
+  </div>
+    <img *ngIf="id !='ComTissus'"  [src]="model.images[0]" style="width: 200px;height: 200px;border-radius: 50%;margin:10px 10px 10px 10px;">
+  <div class="" style="font-family: 'Acme', sans-serif; font-size: 23px;  color:#232f3e;border-top: 1px solid #eff0f3;padding-left: 20%; ">
+			id :{{user.id}} <br>
+			client :{{user.name}} {{user.prename}}__telephone:{{user.telephone}}<br>
+			addresse : {{user.etat}}__ {{user.addresse}}
+
+		</div>
+</div>
+
+
+<div class="container">
+	<div style="display: flex;justify-content: space-around;border-top: 1px solid #eff0f3" >
+			<div *ngIf="collection.withCoture ==2" style="display: flex;flex-direction: column;">
+<div class="" style="font-family: 'Acme', sans-serif; font-size: 20px;  color:#232f3e;border-top: 1px solid #eff0f3; ">livraison +installation</div>
+
+<div style="display: flex;">
+	<b class=""style="font-family: 'Dancing Script', cursive;;padding-top: 10px;">prix:50dt</b>
+	<img src="assets/going-to-work-icon-trendy-logo-concept-white-b-background-people-collection-suitable-use-web-apps-mobile-print-133523886.jpg" style="height: 50px;margin-left: 10px;">
+						<b style="size: 10px;padding-top: 10px;">+</b>
+						<img src="assets/mbridelivery_99588.png" style="width: 50px;height: 50px;">		
+
+	
+</div>
+		
+
+	</div>	
+
+	<div *ngIf="collection.withCoture !=0"style="display: flex;justify-content: space-around;">
+	<div style="display: flex;flex-direction: column;">
+<div class="" style="font-family: 'Acme', sans-serif; font-size: 23px;  color:#232f3e;border-top: 1px solid #eff0f3;padding-left: 20%; ">couture</div>
+<b class=""style="font-family: 'Dancing Script', cursive;;">prix:50dt</b>
+
+	</div>					
+
+<img src="assets/wolle.svg" style="width: 70px;height: 70px;border-radius: 50px;margin-left: 10%">		
+									</div>
+					
+			
+						<div *ngIf="collection.withCoture!=2" style="display: flex;justify-content: space-around;">
+	<div style="display: flex;flex-direction: column;">
+<div class="" style="font-family: 'Acme', sans-serif; font-size: 23px;  color:#232f3e;border-top: 1px solid #eff0f3;padding-left: 20%; ">livraison</div>
+<b class=""style="font-family: 'Dancing Script', cursive;;">prix:50dt</b>
+
+	</div>					
+								<img src="assets/mbridelivery_99588.png" style="width: 70px;height: 70px;border-radius: 50px;margin-left: 10%">		
+									</div>
+
+									<b style="font-family: 'Acme', sans-serif;">
+										date de command<br>
+										{{collection.date}}
+									</b>
+									<b style="font-family: 'Acme', sans-serif;">
+										date de livraison<br>
+										----------------
+									</b>
+								</div>
+												<!--llllllllllllllllllllllllllllllllllllllllllll!-->
+
+		
+				
+			<div style="display: flex; flex-wrap: wrap;">
+	<div *ngFor="let compo of composant "  style="display: flex;flex-direction: column;margin-left:90px;">
+		 
+<div style="font-family: 'Acme', sans-serif; font-size: 23px;  color:#232f3e;border-top: 1px solid #eff0f3;padding-left: 20%; ">{{compo.name}}</div>
+						<div style="display: flex;justify-content: space-around;">
+
+								<div style="display: flex;;flex-direction: column;
+								font-size: 20px;">
+									<p >id:{{compo.id}}</p>
+					<p >longueur:100m </p>
+					<p>prix:50dt</p>
+				   <p >fournisseur:{{compo.fournisseur}}</p>
+
+
+					
+
+					</div>
+							
+								<img [src]="compo.images[0]" style="border-radius: 8px;width: 190px;height: 190px;border-radius: 50%;margin-left: 10%">		
+									</div>
+					
+				</div>
+			</div>
+			<
+	
+<!--
+
+	public id:number,
+		public name:string,
+		public prename:string,
+		public mail:string,
+		public password:string,
+		public etat:string,
+		public codePostale:string,
+
+		public addresse:string,
+		public telephone:string,
+	!-->
+
+				
+			
+					
+					
+			
+				<!--llllllllllllllllllllllllllllllllllllllllllll!-->
+						<!--llllllllllllllllllllllllllllllllllllllllllll!-->
+					
+
+
+</div>
+
+
+

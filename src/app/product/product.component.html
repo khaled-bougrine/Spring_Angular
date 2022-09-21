@@ -1,0 +1,49 @@
+
+
+<div  class="product1 "(mouseenter)="mouseEnter()"  (mouseleave)="mouseOute()" style=" display: flex; flex-direction: column; margin-right: 50px; " >
+	<div class="   badge badge-light" style="width: 100px;">serie:#{{product.nbserie}}</div>
+							<div class="" style="font-family: 'Acme', sans-serif; font-size: 23px; padding-left: 30px; color:#232f3e  "	>{{product.name}}</div>
+	<div  class="" style="border-bottom: 0.5px #eff0f3  solid; padding-bottom: 20px;display: flex;">
+		<div >
+
+				<img   [src]="product.images[0]" id="22"style="width: 70px;height: 70px; display: block; padding-bottom: auto;padding-top: auto;">
+
+
+		</div>
+
+
+
+
+							<div class=" " style="margin-left: 13px; padding-top: 25px;display: flex;justify-content: center;font-family: 'Dancing Script', cursive;">
+            <h4 style="color:#000000;">{{product.price-(product.solde*product.price)/100}}DT</h4>
+            <b style="text-decoration:line-through;
+ font-size: 15px; padding-top: 5px; color: #000000" *ngIf="product.solde!=0" >{{product.price}}</b>
+            </div>
+</div>
+<div style=" display: flex;justify-content: space-around;" >
+<b *ngIf="length" class="badge badge-primary">length:{{length}}</b>
+<b *ngIf="length" class="badge badge-warning">price:{{length}}DT</b>
+<b *ngIf="length&&product.solde!=0" class="badge badge-danger">save:{{length}}DT</b>
+
+</div>
+
+<b [ngClass]="ischange">changer this product</b>
+</div>
+
+
+
+<style type="text/css">
+	.change{font-size:8px; color: #ff0000;padding-left: 5px;
+
+	}
+	.dontchange{
+		font-size:8px; color: #ff0000;padding-left: 5px;
+		visibility: hidden;
+	}
+	.product1:hover{border-top: 1px #eee solid;
+
+
+	}
+
+
+</style>

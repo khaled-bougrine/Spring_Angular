@@ -1,0 +1,58 @@
+
+  <div  *ngIf="isMyProduct" class="badge badge-light"style="margin-right: auto;margin-left: 5px;color: #232F3E">#Votre Choix</div>
+  <div *ngIf="estDansComposant" [ngClass]="useProduct" class="badge badge-light "style="margin-right: auto;margin-left: 5px;color: #232F3E">utiliser ce model</div>
+
+
+		<div style="display: flex; flex-direction: column; margin-right: 20px; border : 1px solid #eff0f3 ;padding:5px 5px 5px 5px;">
+			<!--
+			 <b>{{product.id}}</b>
+
+			 <b>{{product.colore}}</b>
+			 <b>{{product.length}}</b>
+			 <b>{{product.modele}}</b>
+			  <b>{{product.name}}</b>
+			  [routerLink]="'/model/'+type+ '/'+product.id"
+!-->
+
+		<img  *ngIf="isload" src="assets/loading.gif"  class="image" style="width: 180px; height: 200px;cursor: pointer; ">
+			
+		<img [hidden]="isload" (mouseenter)="mouseEnter()" (click)="routeModel()" (mouseleave)="mouseOute()" [src]="product.images[0]" class="image" style="width: 180px; height: 200px;cursor: pointer; " (load)="onImageLoad($event)">
+		<div style="display: flex;justify-content: space-around;border-bottom: 1px solid #eff0f3;">
+			<b style="font-size: 20px;font-family: 'Dancing Script', cursive;;color:#2e3d5c ;">
+		 {{product.fabric}}-{{product.modele}}
+</b>
+
+<img  *ngIf="!estDansComposant" [src]="love" style="width: 30px;height: 30px ;cursor:pointer;" (click)="loveit()">
+
+
+		
+		</div>
+		
+				<div  style=";display: flex;justify-content: center;font-family: 'Dancing Script', cursive;">
+            <b style="color:#000000;font-size: 15px;">{{product.price-(product.solde*product.price)/100}}&nbsp;DT  <b style="text-decoration:line-through;
+ font-size: 15px; padding-top: 10px; color: #000000" *ngIf="product.solde!=0" >{{product.price}}</b></b>
+
+            </div>
+
+             
+		 			 	
+		<style type="text/css">
+			.image:hover{
+
+		opacity: 0.8;
+
+	}
+	.hide{
+		visibility: hidden;
+
+
+	}
+	.visible{
+		visibility: visible;
+	}
+
+		</style>
+	
+	
+				
+	</div>

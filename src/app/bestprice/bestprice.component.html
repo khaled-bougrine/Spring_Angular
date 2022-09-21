@@ -1,0 +1,36 @@
+ <!--<b style="margin-top: 20px;"> related to product number<span style="margin-left: 20px;"class="badge badge-pill badge-primary">#{{list[1].nbserie}}</span></b>!-->
+
+
+
+<div style="display: flex;flex-direction: column;" (mouseenter)="mouseEnter()">
+	
+
+
+<div style="display: flex; justify-content: flex-start;">
+	<b style="color: #801c32;  font-family: 'Acme', sans-serif; font-size: 40px;margin-left: 50px;margin-bottom: 1px; "><img src="assets/023.jpg" style="width:40px">new</b><b [ngClass]="class">50 produit à moins de 30 $</b>
+</div>
+
+
+
+<div  style="display: flex; justify-content: space-between; ;padding-top: 10px;margin-bottom: 20px;" >
+<button (click)="previes()" [disabled]="d==0" style="margin-top: auto;margin-bottom: auto;display: block; "type="button" class=" btn btn-light"><b style="font-family: 'Open Sans Condensed', sans-serif;   font-size: 28px;margin-top: auto;margin-bottom: auto;color: #223d58">&laquo;</b>
+
+</button>
+		
+		
+
+
+
+<app-bestpriceitem *ngFor="let item of getlist()"  [product]="item"></app-bestpriceitem>
+
+
+	
+<button  [disabled]="f===list.length" (click)="next()" style="margin-top: auto;margin-bottom: auto;display: block; "type="button" class=" btn btn-light"><b style="font-family: 'Open Sans Condensed', sans-serif;   font-size: 28px;margin-top: 50px;color: #223d58;">&raquo;</b>
+</button>
+	
+</div>
+</div>
+<style type="text/css">
+	.class{color: #801c32; font-family: 'Dancing Script', cursive; font-size: 30px; padding-left: 50px;visibility: hidden;}
+	.class1{color: #801c32; font-family: 'Dancing Script', cursive; font-size: 30px; padding-left: 50px;margin-top: 10px;}
+</style>

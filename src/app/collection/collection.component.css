@@ -1,0 +1,16 @@
+    @media screen and (max-width: 820px)
+              {
+                  .kbir
+                  {
+                       display: none;
+                   }
+
+               }
+                   @media screen and (min-width: 820px)
+              {
+                  .s8ir
+                  {
+                       display: none;
+                   }
+
+               }

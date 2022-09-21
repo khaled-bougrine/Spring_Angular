@@ -1,0 +1,56 @@
+<div style="display: flex;flex-direction: column;justify-content: center;margin-top: 100px;">
+        
+             <form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+          <div class="test" style="margin-left: 40%;">
+              
+              <b style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size: 30px;padding-left: 20px;margin-bottom: 1px;" >Login</b>
+          </div>
+            
+            
+          
+         
+
+		   <div class="box">   
+            <label class="text">Email</label>
+             <input class="form-control" type="email " style="height: 40px; width:100%; "formControlName="mail"  >
+             </div>
+
+
+             <div class="box">
+              <label class="  text">password</label>
+             <input class="form-control "type="password" style="height: 40px; width: 100%;" formControlName="password" >
+             </div>
+             <div class="box"*ngIf="noValid">
+                <h6 style="color: red;">Wrong email or password </h6>
+                 
+             </div>
+      <div class="box">
+                 <button style="width: 100%;margin-top: 50px;"   class="btn btn-primary" [disabled]="userForm.invalid"><h6 style="color: #ebe3cf; font-family: 'Acme', sans-serif;margin-top: 7px;">Submit</h6></button>
+             </div>
+
+           
+         </form>
+                 <div class="box">
+              
+               <button class="btn " style="width: 100%;background-color: #232F3E;margin-top: 50px;" routerLink="/newUser"> <h6 style="color: #ebe3cf; font-family: 'Acme', sans-serif;margin-top: 7px;">Cree un compte </h6></button>
+             </div>
+
+     </div>
+
+
+             <style type="text/css">
+             	
+             	.text{
+             	color: #232F3E; font-family: 'Acme', sans-serif;margin-top: 15px;
+
+             	}
+             
+             	 .test::first-letter {
+                color: #92a197; 
+                font-size: 30px;
+                
+              }
+             </style>
+            
+             
+	

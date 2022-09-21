@@ -1,0 +1,335 @@
+<div  class="row" style="display: flex; background-color: #00ad2d;justify-content: space-between;height: 50px;">
+	
+		<b class="barre">ajouter un model</b>
+	
+		<b class="barre">ajouter un accesoire</b>
+
+		<b class="barre">ajouter un tissue</b>
+		<b  class="barre"> tous les Model</b>
+		<b class="barre"> tous les accesoire</b>
+		<b class="barre"> tous les tissue</b>
+
+	
+</div>
+  
+<div>
+
+
+  <div style="display: flex;justify-content: space-around;flex-wrap: wrap;" *ngIf="configTiss">
+<div *ngFor="let color of configTiss.colors" style="width: 50px;height: 50px;" [ngStyle]="{'background-color':color
+  
+}">{{color}}</div>
+</div>
+
+<div>
+   <input type="text"  [(ngModel)]="addcolore" >
+   <button type="button" class="btn btn-success" (click)="addColore()">addColore </button>
+      <button type="button" class="btn btn-success" (click)="dropColore()">dropColore </button>
+
+</div>
+<div>
+   <input type="text" [(ngModel)]="addmodel" >
+   <button type="button" class="btn btn-success" (click)="addModel()">addModel </button>
+   <button type="button" class="btn btn-success" (click)="dropModel()">dropModel </button>
+
+</div>
+ 
+
+  
+</div>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+
+
+	
+	<div style="display: flex;justify-content: space-around; flex-wrap: wrap;">
+		<!--label for="choose" style="width: 50%;">
+		<div   style="display: flex;justify-content: center;height: 300px;padding-top: 100px;border: 1px #4e6875 solid;margin-top: 20px;">
+		  <img src="assets/logo.png" style="width: 60px ; height: 60px ; margin-right: 1px;">
+            
+           <h5 style="color: #232F3E; font-family: 'Acme', sans-serif;margin-top: 15px;">ajouter une photo</h5>
+
+		</div>
+
+        <div *ngIf=" url" style="display: flex;justify-content: center;height: 300px;;border: 1px #4e6875 solid;margin-top: 20px;">
+        	<img [src]="url">
+        </div>
+ 
+		<div  style="display: flex; justify-content: space-around; padding-top: 20px;">
+		<div class="choosefile" >
+			<b>choose File</b>
+	<input  type="file" class="hide_file" (change)="onFileChanged($event)" >
+	
+	</div>
+
+	<button type="button" style="height: 40px;" class="btn btn-warning"><b style="font-family: 'Acme', sans-serif;  color: #000000; " (click)="onUpload()">submit cette images</b></button>
+	
+		
+	</div>
+	<div   *ngIf="listOfimage.length">
+	<h6 style="color: #ff0000">{{listOfimage.length}} images added to this Model</h6>
+	</div>
+
+	</label !-->
+ <div formArrayName="listOfimage">
+   <div *ngFor="let image of getlistOfimage().controls; let i = index" >
+          <input type="text" class="form-control" [formControlName]="i">
+     
+   </div>
+         <button type="button" class="btn btn-success" (click)="addlistOfimage()">Ajouter une image</button>
+</div>
+
+
+	
+
+
+<div>
+	<div style="display: flex;flex-flow: wrap;">
+	
+	<div class="text">
+	<label  >name</label>
+	<input type="text" formControlName="name">
+    </div>
+      
+
+    <div class="text">
+
+	<label >price</label>
+	<input type="number" name="" formControlName="price">
+</div>
+</div>
+<div style="display: flex;">
+
+
+	<div style="display: flex;flex-wrap: wrap;">
+
+
+	<label  class="container ">new
+	<input type="checkbox" name="" formControlName="isnew">
+	<span class="checkmark"></span>
+	</label>
+
+
+	<label  class="container ">bestprice
+	<input type="checkbox" formControlName="bestprice">
+	<span class="checkmark"></span>
+	</label>
+
+	
+	
+</div>
+	<div class="text">
+
+	<label>solde</label>
+	<input type="number" name="" formControlName="solde">
+   </div>
+    <div *ngIf="model === 'model'" class="text">
+
+  <label >couture</label>
+  <input type="text" name="" formControlName="couture">
+   </div>
+
+</div>
+<div style="display: flex;">   
+	<div class="form-group text" *ngIf="configTiss">
+      <label for="colore">color</label>
+      <select id="colore" class="form-control" formControlName="colore">
+        <option  *ngFor="let color of configTiss.colors" [value]="color">{{color}}</option>
+      
+      </select>
+    </div>
+    <div class="form-group text" *ngIf="model === 'tissus'&& configTiss">
+      <label for="drinkPreference">Model</label>
+      <select  id="drinkPreference" class="form-control" formControlName="modele">
+         <option *ngFor="let model of configTiss.models" [value]="model">{{model}}</option>
+      
+      </select>
+
+
+
+    </div>
+    <div class="form-group text " *ngIf="model=== 'model'">
+      <label for="drinkPreference">pour</label>
+      <select id="drinkPreference" class="form-control" formControlName="pourquoi">
+        <option *ngFor="let model of configservice.pour" [value]="model">{{model}}</option>
+        
+      </select>
+    </div>
+      <div class="form-group text " *ngIf="model=== 'tissus'">
+      <label for="drinkPreference">fabric</label>
+      <select  id="drinkPreference" class="form-control" formControlName="fabric">
+          <option *ngFor="let model of configservice.fabricList" [value]="model">{{model}}</option>
+        
+      </select>
+       
+    </div>
+     <div *ngIf="model === 'accesoire'"  class="text" style="width: 20%;">
+
+  <label>type</label>
+
+  <select id="type" class="form-control" formControlName="type">
+   
+        <option *ngFor="let model of configservice.typeComposant" [value]="model">{{model}}</option>
+        
+      </select>
+   </div>
+  
+
+</div>
+</div>
+</div>
+
+
+
+  <div *ngIf="model=== 'tissus'" class="text" style="width: 20%;">
+
+  <label>quanties</label>
+   <input  type="number"  formControlName="length">
+   </div>
+   <div *ngIf="model != 'model'" class="text" style="width:20%;">
+     <label>fournisseur</label>
+    <input type="text" formControlName="fournisseur">
+     
+   </div>
+    <div *ngIf="model != 'model'" class="text" style="width: 20%;">
+
+  <label>nbserie</label>
+  <input type="text"  formControlName="nbserie">
+   </div>
+
+    
+ 
+
+  
+
+
+<div class="text">
+	<label >description</label>
+	<textarea type="text" name="" style="width: 70%;height: 100px; " formControlName="description"></textarea>
+</div>	
+
+<div formArrayName="idModels"  *ngIf="model != 'model'" >
+  <h3>les  id de model qui contient ce type</h3>
+      <div class="form-group"   *ngFor="let id of getIdModel().controls;let i =index">
+        
+        <label> ajouter le id de composant</label>
+        <input type="text" class="form-control"  [formControlName]="i" >
+        
+      
+      </div>
+      <button type="button" class="btn btn-success" (click)="addIdModel()">Ajouter un id de composant</button>
+  
+
+</div>
+
+
+
+
+
+<div formArrayName="composants"  *ngIf="model=== 'model'" >
+      <h3>les composant de ce Model</h3>
+      <div class="form-group"   *ngFor="let composant of getComposant().controls">
+      	<div [formGroup]="composant">
+          <div class="text">
+      	<label> ajouter le id de composant</label>
+
+        <input type="number" class="form-control"  formControlName="idModel" >
+          <label>length</label>
+        <input type="number" class="form-control"  formControlName="length" >
+          <label>composant</label>
+        <select  id="coposant" class="form-control" formControlName="composant">
+        <option value="tissus">tissus</option>
+        <option value="getaccesoire">accesoire</option>
+    
+
+      </select>
+          <label>nbserie</label>
+        <input type="number" class="form-control"  formControlName="nbserie" >
+      </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success" (click)="addcomposant()">Ajouter un id de composant</button>
+</div>
+
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+
+
+</form>
+
+
+
+<style type="text/css">
+	.barre{
+		color: #ffffff; font-family: 'Acme', sans-serif;font-size: 20px;padding-top: 20px;
+	}
+	
+	.text{
+		color: #232F3E; font-family: 'Acme', sans-serif;font-size:20px;
+		display: flex;flex-direction: column;margin-right: 70px;margin-top: 20px;
+
+	}
+		.hide_file {
+      position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+}
+.choosefile{
+	width: 200px;
+	height: 40px;
+  background:#00ad2d;
+  border:1px solid #00ad2d;
+  position:relative;
+  color:#fff;
+  border-radius:2px;
+  text-align:center;
+  float:left;
+  cursor:pointer
+}
+	
+	.container {
+		margin-top: 20px;
+		color: #232F3E; font-family: 'Acme', sans-serif;font-size:20px;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #4e6875;
+}
+
+</style>

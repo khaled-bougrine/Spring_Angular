@@ -1,0 +1,421 @@
+
+
+
+
+
+<div  [ngClass]="class2" class="row " style="height: 400px;cursor: pointer; background-color: #658577;justify-content:space-between;
+">
+<div class="Cadredebouton  banniere_image1"  style="background-image: url('assets/home11.jpeg');padding-left: 20px;">
+    <button  (click)="change()" style=";margin-top: 150px; "type="button" class=" btn btn-light"><b class="bouton">&laquo;</b>
+</button>
+
+
+</div>
+
+<div  class="" style="justify-content: space-around; margin-top: 100px;border-bottom:2px #b59860 solid;margin-bottom: 220px;">
+
+		<b class="test1 banniere_image" style="color: #b59860; font-family: 'Acme', sans-serif;font-size:35px;  "> Vendre toutes sortes de tissus</b>
+</div>
+
+
+	<div   class="Cadredebouton  " style="background-image: url('assets/home1.jpeg');padding-left: 200px;">
+<div *ngIf="service.visibility" style="width:250px;;display: flex;flex-direction: column;position: absolute;right: 20px;">
+
+
+                  <div class="name" style="margin-top: 20px;">{{service.user.name +' '+service.user.prename}} </div>
+			<button type="button" class="btn btn-primary" (click)="deconnecter()">Deconnecter</button>
+
+
+		</div>
+			 <button   (click)="change1()"  style="margin-top: 150px; margin-right: 20px;   position: absolute;right: 20px;
+  "type="button" class=" btn btn-light bouton "><b >&raquo;</b>
+</button>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div  [ngClass]="class4 "  class="row"  style="background-image:url('assets/91.png');justify-content: flex-start; /* Center the image */background-position: center;
+  background-repeat: no-repeat; background-size: cover;height: 400px;justify-content: space-around;
+">
+  <button  (click)="change()" style=";position: absolute;left: 20px;top: 210px; "type="button" class=" btn btn-light bouton"><b >&laquo;</b>
+</button>
+
+
+
+
+
+
+<div   style="flex-direction: column;display: flex;justify-content: center;    align-items: center;margin-left: 15%;
+">
+	<b style="color: #ffffff; font-family: 'Dancing Script', cursive; font-size:35px; "> Sew all kinds of curtains</b>
+	<b style="color: #68022a; font-family: 'Dancing Script', cursive; font-size:35px; margin-right: 100px;"> خياطة  جميع أنواع الستائر</b>
+	</div>
+<div *ngIf="service.visibility" style="width:250px;;display: flex;flex-direction: column;position: absolute;right: 20px;">
+
+
+                  <div class="name" style="margin-top: 20px;">{{service.user.name +' '+service.user.prename}} </div>
+			<button type="button" class="btn btn-primary" (click)="deconnecter()">Deconnecter</button>
+
+
+		</div>
+			 <button   (click)="change1()"  style="margin-top: 150px; margin-right: 20px;   position: absolute;right: 20px;
+  "type="button" class=" btn btn-light bouton "><b >&raquo;</b>
+</button>
+
+
+</div>
+
+	<style type="text/css">
+		  .name::first-letter {
+                color: #1ba8f1;
+                font-size: 30px
+
+              }
+              .name{
+
+
+                color: #2e3d5c; font-family: 'Acme', sans-serif;;               font-size: 25px;
+
+
+              }
+              .Cadredebouton{
+              	width:250px; background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;;
+
+              }
+              .bouton{
+              	font-family: 'Open Sans Condensed', sans-serif;   font-size: 28px;margin-top: auto;margin-bottom: auto
+              }
+
+	</style>
+
+<div   [ngClass]="class3" class="row" style="justify-content: space-between;height: 400px;background-color:#edeef0 ;
+">
+
+	<div  class="banniere_image" style="background-image: url('assets/39764642_018_b.webp');padding-left: 20px;background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;;height: 400px;width: 250px;">
+    <button  (click)="change()" style=";margin-top: 150px; "type="button" class=" btn btn-light"><b class="bouton">&laquo;</b>
+</button>
+</div>
+
+	<b class="test2" *ngIf="!service.visibility" style="color: #6d6e77; font-family: 'Acme', sans-serif;font-size:35px; border-bottom: 1px solid #95c3c0; margin-bottom: 50%;"> Installer toutes sortes de Rideaux</b>
+	<b class="test2" *ngIf="service.visibility"  style="color: #6d6e77; font-family: 'Acme', sans-serif;font-size:35px; border-bottom: 1px solid #95c3c0; margin-bottom: 50%;font-size: 20px;"> Installer toutes sortes de Rideaux</b>
+
+
+
+
+
+		<div *ngIf="!service.visibility" class="banniere_image1" style="background-image: url('assets/39764642_018_b2.jfif');padding-left: 200px;background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;;height: 400px;width: 250px;">
+    <button  (click)="change1()" style=";margin-top: 150px; "type="button" class=" btn btn-light"><b class="bouton">&raquo;</b>
+</button>
+</div>
+
+
+	<div *ngIf="service.visibility" style="width:250px;background-color: #ffffff;padding-left: 50px;">
+
+
+                  <div class="name" style="margin-top: 20px;">{{service.user.name +' '+service.user.prename}} </div>
+<div style="display: flex;margin-top: 20px;">
+	 <img src="assets/hometest1.jpg" style="width:
+               50px ;height: 50px;">
+	 <div class="name">Addresse</div>
+
+</div>
+
+
+
+          <div class="grie"style="margin-bottom: 20px;" >
+          	<p>{{service.user.etat}}<br />
+			{{service.user.codePostale}}<br />
+			{{service.user.addresse}}</p>
+          </div>
+
+
+			<button type="button" class="btn btn-primary" (click)="deconnecter()">Deconnecter</button>
+
+		</div>
+
+
+
+
+
+</div>
+
+<!--div  [ngClass]="class2 "  class="row"  style="background-image:url('assets/4-Tiebacks.jpg');justify-content: flex-start; /* Center the image */background-position: center;
+  background-repeat: no-repeat; background-size: cover;height: 400px;justify-content: space-between;
+">
+  <button  (click)="change()" style=";margin-top: 150px;margin-left: 20px; "type="button" class=" btn btn-light bouton"><b >&laquo;</b>
+</button>
+
+
+
+
+
+
+
+
+
+	<div *ngIf="service.visibility" style="width:250px;;display: flex;flex-direction: column;position: absolute;right: 20px;">
+
+
+                  <div class="name" style="margin-top: 20px;">{{service.user.name +' '+service.user.prename}} </div>
+			<button type="button" class="btn btn-primary" (click)="deconnecter()">Deconnecter</button>
+
+
+		</div>
+			 <button   (click)="change1()"  style="margin-top: 150px; margin-right: 20px;   position: absolute;right: 20px;
+  "type="button" class=" btn btn-light bouton "><b >&raquo;</b>
+</button>
+
+
+
+
+</div>
+<div  [ngClass]="class3 "  class="row"  style="background-image:url('assets/1-Artistry-Performance.jpg');justify-content: flex-start; /* Center the image */background-position: center;
+  background-repeat: no-repeat; background-size: cover;height: 400px;justify-content: space-between;
+">
+  <button  (click)="change()" style=";margin-top: 150px;margin-left: 20px; "type="button" class=" btn btn-light bouton"><b >&laquo;</b>
+</button>
+
+
+
+
+
+
+<div *ngIf="service.visibility" style="width:250px;;display: flex;flex-direction: column;position: absolute;right: 20px;">
+
+
+                  <div class="name" style="margin-top: 20px;">{{service.user.name +' '+service.user.prename}} </div>
+			<button type="button" class="btn btn-primary" (click)="deconnecter()">Deconnecter</button>
+
+
+		</div>
+			 <button   (click)="change1()"  style="margin-top: 150px; margin-right: 20px;   position: absolute;right: 20px;
+  "type="button" class=" btn btn-light bouton "><b >&raquo;</b>
+</button>
+
+
+
+</div!-->
+
+   <style type="text/css">
+              .test::first-letter {
+                color: #ececeb;
+                font-size: 45px;
+
+              }
+
+              .test1::first-letter {
+                color: #d9d3b8;
+                font-size: 40px;
+
+              }
+               .test2::first-letter {
+                color: #95c3c0;
+                font-size: 50px;
+
+              }
+              .hide {
+              	display: none;
+
+              }
+                @media screen and (max-width: 800px)
+              {
+                  .banniere_image
+                  {
+                       display: none;
+                   }
+
+               }
+               @media screen and (max-width: 1000px)
+              {
+                  .banniere_image1
+                  {
+                       display: none;
+                   }
+
+               }
+               .visible{
+               	 display: flex;
+               }
+               .grie{
+               	color: #8b8b8b; font-family: 'Acme', sans-serif; font-size:16px; ;display: flex;flex-direction: column;margin-left: 20px;margin-left: 50px;
+               }
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="row">
+	<app-bestprice [list]="bestprice"></app-bestprice>
+
+
+
+
+</div>
+!-->
+
+
+<div style="display: flex;justify-content: flex-start;" >
+<img  class="banniere_image" src="assets/gggg.jpg" style="width: 100px">
+
+
+<div style=""  (mouseenter)="mouseEnter()">
+	<div style="display:flex;"></div>
+	<b style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size: 30px;padding-left: 20px;margin-bottom: 1px;" >Les Modèles De Rideaux</b>
+<div [ngClass]="class"> plus de 20 Modèles et 20 Marque International sont  disponibles en tunisie </div>
+<div style="display: flex;flex-wrap: wrap;justify-content: space-between;margin-left: 50px;">
+
+
+			<app-onetype class="click"  classColore2="classe2" classColore1="class1" link="/tout/model/Chambre d'enfant"  classColore="class4" name="Chambre d'enfant" image="assets/modelChambre d'enfant.jpg" ></app-onetype>
+			<app-onetype  routerLink="tout/model/fenetre" classColore2="classe2" link="/tout/model/fenetre"  classColore1="class1" classColore="class4" name="Porte fenetre" image="assets/modelfenetre.jpg"></app-onetype>
+			<app-onetype routerLink="tout/model/salon"   classColore2="classe2"  classColore1="class1" classColore="class4" name="Salon"image="assets/modelsalon.jpg"></app-onetype>
+			<app-onetype  routerLink="tout/model/chambre" classColore2="classe2"  classColore1="class1" classColore="class4"name="chambre" image="assets/modelchambre.jpg"></app-onetype>
+			<style type="text/css">
+
+
+			</style>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+<div style="display: flex;justify-content: center; border:25px #d2cdc9 solid ;">
+	<div style="display: flex;justify-content: center;flex-direction: column;">
+		<b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:35px; border-bottom: 1px #6a4532 solid;padding-top: 50px; "> installer des rideaux en ligne </b>
+	<div style="display: flex;">
+		<b class="" style="color: #8b8b8b; font-family: 'Acme', sans-serif; font-size:16px; padding-top: 8px;"> Follow Us :</b>
+		<img src="assets/facebook.png" style="width: 30px;height: 30px;">
+	<img src="assets/instagram.png" style="width: 30px;height: 30px;">
+	</div>
+</div>
+
+
+	<img src="assets/line1.jpg" style="width: 200px;height: 200px;border-radius: 50%;margin:10px 10px 10px 10px;">
+</div>
+
+
+<div style="display: flex;padding-bottom: 50px; " >
+<img src="assets/gggg.jpg" style="width: 100px;height: 400px;">
+
+
+<div style="display:flex;flex-direction: column;" (mouseenter)="mouseEnter1()" >
+	<b style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size: 30px;padding-left: 20px;margin-bottom: 1px;">Les Accessoires De Rideaux</b>
+	<div [ngClass]="class1"> plus de 20 Modèles et 20 Marque International sont  disponibles en tunisie </div>
+
+<div style="display: flex;flex-wrap: wrap;justify-content: space-around;">
+
+
+			<app-onetype link="tout/getaccesoire/poteaux" classColore2="class2" classColore1="classe1" classColore="class6" name="Poteaux à rideaux" image="assets/getaccesoirepoteaux.jpg"></app-onetype>
+			<app-onetype  link="tout/getaccesoire/embrasses"  classColore2="class2" classColore1="classe1"  classColore="class6" name="Embrasses" image="assets/getaccesoireembrasses.jpg"></app-onetype>
+			<app-onetype link="tout/getaccesoire/frange"  classColore2="class2" classColore1="classe1" classColore="class6" name="la frange"image="assets/getaccesoirefrange.jpg"></app-onetype>
+			<app-onetype link="tout/getaccesoire/mercerie"  classColore2="class2" classColore1="classe1" classColore="class6"name="Mercerie" image="assets/getaccesoiremercerie.jpg"></app-onetype>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+<!---------------!-->
+<div style="display: flex;flex-direction: column;border:25px #eee solid ;">
+<div style="display: flex;justify-content: center; ; ">
+	<div style="display: flex;justify-content: center;flex-direction: column;">
+		<b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:35px; border-bottom: 1px #6a4532 solid;padding-top: 50px; ">  Make your collection for your curtain  </b>
+	<div style="display: flex;">
+		<b class="" style="color: #8b8b8b; font-family: 'Acme', sans-serif; font-size:16px; padding-top: 8px;">plus de 20 type de tissus sont disponible</b>
+
+	</div>
+</div>
+
+
+	<!--img src="assets/3.jpg" style="width: 200px;height: 200px;border-radius: 50%;margin:10px 10px 10px 10px;"!-->
+</div>
+
+
+
+
+
+<div style="display: flex;flex-wrap: wrap;justify-content: space-around;margin-top: 50px;" >
+
+
+			<app-onetype classColore2="classe2" classColore1="class1"  classColore="class4" name="voile//الفوال " image="assets/tissusvoile.jpg" link="tout/tissus/voile"></app-onetype>
+			<app-onetype link="tout/tissus/silk" classColore2="classe2"  classColore1="class1" classColore="class4" name="soie //الحرير" image="assets/tissussilk.jpg"></app-onetype>
+			<app-onetype link="tout/tissus/plush" classColore2="classe2"  classColore1="class1" classColore="class4" name=" plush//القطيفة"image="assets/tissusplush.jpg"></app-onetype>
+			<app-onetype link="tout/tissus/organsa" classColore2="classe2"  classColore1="class1" classColore="class4"name="organza// الأورجانزا " image="assets/tissusorgansa.webp"></app-onetype>
+			<!-- /////////////////////// !-->
+			<app-onetype link="tout/tissus/linen" classColore2="classe2" classColore1="class1"  classColore="class4" name="linen // الكتان  " image="assets/tissuslinen.jpg"></app-onetype>
+			<app-onetype link="tout/tissus/cotton" classColore2="classe2"  classColore1="class1" classColore="class4" name="القطن cotton" image="assets/tissuscotton.jpg"></app-onetype>
+
+			<app-onetype link="tout/tissus/satin"  classColore2="classe2"  classColore1="class1" classColore="class4" name=" الستان satin"image="assets/tissussatin.jpg"></app-onetype>
+
+
+
+
+
+
+
+
+</div>
+</div>
+<!--div style="display: flex;flex-direction: column;">
+	<b style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size: 30px;">comment acheter des rideau avec cinderella</b>
+	<div> <img src="assets/jja2.jpg" style="width: 20%;">
+	 <b style="font-size:  100px;color: #eebebc; font-family: 'Acme', sans-serif;">1</b></div>
+
+	<img src="assets/jja3.jpg" style="width: 20%;">
+	<img src="assets/jja4.jpg" style="width: 20%;">
+</div-->
+<div style="height: 100px"></div>
+<style type="text/css">
+
+	.class{
+		color: #8b8b8b; font-family: 'Acme', sans-serif;  font-size: 16px; height: 50px;
+	}
+	.class1{
+		color: #8b8b8b; font-family: 'Acme', sans-serif;  font-size: 16px; height: 50px;
+	}
+	.class2{
+		color: #8b8b8b; font-family: 'Acme', sans-serif;  font-size: 16px;visibility: hidden;
+		height: 50px
+	}</style>

@@ -1,0 +1,132 @@
+     	<div  style="display: flex; flex-direction: column; ;margin-top:  ">
+     		<div *ngIf="estpaiee" class="badge-warning badge" style="direction: flex;">
+
+		{{collection.date}} <br>
+*Paiee	:{{collection.prixpaiee}} DT
+
+
+
+
+</div>
+
+
+
+
+			<img    [src]="model.images[0]" style="width: 70px;height: 70px;  margin-left: auto;margin-right: auto;border-radius: 50%;">
+
+
+			<div style="direction: flex">
+
+
+<!--////////////////////////////////////////////////--!-->
+
+	<div *ngFor="let compo of composant "  style="display: flex;flex-direction: column;">
+<div style="font-family: 'Acme', sans-serif; font-size: 23px;  color:#232f3e;border-top: 1px solid #eff0f3;padding-left: 20%; ">{{compo.name}}</div>
+						<div style="display: flex;justify-content: space-around;">
+<div class="kbir">
+
+								<div  style="display: flex;;flex-direction: column;">
+					<b class=""style="font-family: 'Dancing Script', cursive;;">longueur:100m </b>
+					<b class=""style="font-family: 'Dancing Script', cursive;;">prix:50dt</b>
+
+
+					</div>
+
+</div>
+
+								<img [src]="compo.images[0]" style="border-radius: 8px;width: 50px;height: 50px;border-radius: 50%;margin-left: 10%">
+									</div>
+
+				</div>
+				<!--llllllllllllllllllllllllllllllllllllllllllll!-->
+				<!--////////////////////////////////////////////////--!-->
+				<div   *ngIf="collection.withCoture !=0"style="display: flex;justify-content: space-around;">
+					<div class="kbir">
+							<div  style="display: flex;flex-direction: column;">
+<div class="" style="font-family: 'Acme', sans-serif; font-size: 23px;  color:#232f3e;border-top: 1px solid #eff0f3;padding-left: 20%; ">couture</div>
+<b class=""style="font-family: 'Dancing Script', cursive;;">prix:50dt</b>
+
+	</div>
+
+					</div>
+
+
+<img src="assets/wolle.svg" style="width: 70px;height: 70px;border-radius: 50px;margin-left: 10%">
+									</div>
+
+
+				<!--llllllllllllllllllllllllllllllllllllllllllll!-->
+						<div *ngIf="collection.withCoture!=2" style="display: flex;justify-content: space-around;">
+							<div class="kbir">
+									<div  style="display: flex;flex-direction: column;" >
+<div class="" style="font-family: 'Acme', sans-serif; font-size: 23px;  color:#232f3e;border-top: 1px solid #eff0f3;padding-left: 20%; ">livraison</div>
+<b class=""style="font-family: 'Dancing Script', cursive;;">prix:50dt</b>
+
+	</div>
+
+							</div>
+
+								<img src="assets/mbridelivery_99588.png" style="width: 70px;height: 70px;border-radius: 50px;margin-left: 10%">
+									</div>
+
+
+				<!--llllllllllllllllllllllllllllllllllllllllllll!-->
+						<!--llllllllllllllllllllllllllllllllllllllllllll!-->
+
+
+
+	<div *ngIf="collection.withCoture ==2" style="">
+<div  class="kbir" style="font-family: 'Acme', sans-serif; font-size: 20px;  color:#232f3e;border-top: 1px solid #eff0f3; ">livraison +installation</div>
+
+<div style="display: flex;flex-wrap: wrap;">
+	<b class=" kbir"style="font-family: 'Dancing Script', cursive;;padding-top: 10px;">prix:50dt</b>
+	<img src="assets/going-to-work-icon-trendy-logo-concept-white-b-background-people-collection-suitable-use-web-apps-mobile-print-133523886.jpg" style="height: 50px;margin-left: 10px;">
+						<b style="size: 10px;padding-top: 10px;">+</b>
+						<img src="assets/mbridelivery_99588.png" style="width: 50px;height: 50px;">
+
+
+</div>
+
+
+	</div>
+
+
+					<div style="display: flex;flex-wrap: wrap;justify-content:space-around; ">
+				<div style="font-family: 'Acme', sans-serif; font-size: 20px;  color:#232f3e;border-top: 1px solid #eff0f3; ">Total</div>
+
+			<h4 style=" ;display: flex;justify-content: center;font-family: 'Dancing Script', cursive;">
+				100 Dt
+
+			</h4>
+			</div>
+				<!--llllllllllllllllllllllllllllllllllllllllllll!-->
+
+
+
+			</div>
+
+<button *ngIf="!estpaiee" type="button" style="width: 100%;height: 40px;" (click)="addCollectionP()"class="btn btn-warning  "><img src="assets/ss.ico" width="30px;"><b class="kbir" style="font-family: 'Acme', sans-serif; font-size: 20px; ">Buy It Now</b></button>
+<style type="text/css">
+	   @media screen and (max-width: 820px)
+              {
+                  .kbir
+                  {
+                       display: none;
+                   }
+
+               }
+      @media screen and (min-width: 820px)
+              {
+                  .s8ir
+                  {
+                       display: none;
+                   }
+
+               }
+</style>
+
+
+	</div>
+
+
+

@@ -1,0 +1,21 @@
+
+		<div style="display: flex; flex-direction: column; margin-right: 20px; cursor: pointer;">
+			<div style="background-image: url(assets/015.jpg);width: 25%"><b style="color: #ffffff">new</b></div>
+		<img [src]="product.images[0]" style="width: 140px; height: 200px;   border-radius: 8px;
+"(mouseenter)="mouseenter()" (mouseleave)="mouseout()">
+		<b style="font-size: 8px;">{{product.name}}</b>
+		<div class="row" style="margin-left: 4px;">
+            <h4 >{{product.price-(product.solde*product.price)/100}}DT</h4>
+            <b style="text-decoration:line-through;font-family: 'Acme', sans-serif;
+font-family: 'Dancing Script', cursive; font-size: 15px; padding-top: 5px;" *ngIf="product.solde!=0">{{product.price}}DT</b>
+            </div>
+            <div [ngClass]="ishere"> <b  *ngIf="product.solde!=0 " class="badge  badge-danger" style="width: 50%;">save {{(product.solde*product.price)/100}} DT</b>
+				</div>
+           
+	</div>
+<style type="text/css">
+	.class{
+		visibility: hidden;
+
+	}
+</style>
